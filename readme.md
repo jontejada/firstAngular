@@ -92,6 +92,8 @@ application.controller("HelloController", function($scope) {
 
 [style guide](https://github.com/johnpapa/angular-styleguide)
 
+##[bitcoin calculator](https://github.com/mjhea0/thinkful-angular)
+
 ##work on curriculum
 
 ###[`ngApp`](https://docs.angularjs.org/api/ng/directive/ngApp)
@@ -104,4 +106,8 @@ application.controller("HelloController", function($scope) {
 
 [thinking in Angular](http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background/15012542#15012542) on stackoverflow
 
+###[ngModel](https://docs.angularjs.org/api/ng/directive/ngModel)
+- binds input, select, textarea or custom form control to a property on the scope
 
+about dirty checling:
+>Angular defines a concept of a so called digest cycle. This cycle can be considered as a loop, during which Angular checks if there are any changes to all the variables watched by all the $scopes. So if you have $scope.myVar defined in your controller and this variable was marked for being watched, then you are explicitly telling Angular to monitor the changes on myVar in each iteration of the loop.
