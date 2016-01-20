@@ -90,7 +90,7 @@ application.controller("HelloController", function($scope) {
 
 ##work on curriculum
 
-###ngApp
+###[`ngApp`](https://docs.angularjs.org/api/ng/directive/ngApp)
 - auto-bootstraps the app in designated root element
 - one per HTML doc (almost always)
 - module can be specified as the app's root module
