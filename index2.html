@@ -1,0 +1,14 @@
+<!-- from https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/01-intro-and-setup.md -->
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+    <title>{{ greeting }} World</title>
+  </head>
+  <body>
+    <p>{{1 + 6}}<p>
+    <br>
+    <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
+    <p>{{ greeting }} world!</p>
+  </body>
+</html>
