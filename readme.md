@@ -19,8 +19,11 @@
 - what the user sees
 - the DOM
 
-####data binding
-- sync data between **model** and **view**
+####[data binding](https://docs.angularjs.org/guide/databindingtw)
+- 2-way data sync between **model** and **view**
+- changes to JS module automatically update the DOM. explicit refresh is not required 
+
+![data binding image](https://docs.angularjs.org/img/Two_Way_Data_Binding.png)
 
 ####controller
 - biz logic behind views
@@ -38,16 +41,17 @@
 ####service
 - reusable biz logic independent of **views**
 
-####template
+####[template]( https://docs.angularjs.org/guide/templates)
 - HTML with additional markup
 
 ####compiler
 - passes **template** and instantiates **directives** and **expressions**
 
-####directive
+####[directive](https://docs.angularjs.org/guide/directive)
 - extend HTML with custom attributes and elements
 - e.g. `ng-app` attr is linked to a dir that auto initializes app
-- THE ONLY PLACE app should access the DOM
+- *THE ONLY PLACE* app should access the DOM
+- marker on a DOM element (such as attr, element name comment or CSS class) that tell the **compiler** to attach specific behavior to that DOM element or transform it and it's children .
 
 ####expression
 - access variables and functions from the **scope**
@@ -98,4 +102,6 @@ application.controller("HelloController", function($scope) {
 	- can have dependencies on other modules
 	- see `angular.module`
 
-[thinking in Angular](http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background/15012542#15012542)
+[thinking in Angular](http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background/15012542#15012542) on stackoverflow
+
+
