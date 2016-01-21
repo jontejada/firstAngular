@@ -34,12 +34,15 @@ angular.module("app", [])
 			{id:3, name:'overnight', price:4500, days:1}
 		];
 		$scope.selectedMethod = $scope.shippingMethods[0];
-
-		function deliveryDate() {
+		//rebuild with shippingMethods.days
+		
+		function updateDate() {
 			var date = new Date();
-			date.setDate(date.getDate() + 10);
-			console.log(date);
+			date.setDate(date.getDate() + $scope.selectedMethod.days);
+			//return date;
+			$scope.deliveryDate = date;
 		}
-		deliveryDate();
+		$scope.updateDate = updateDate;
+		updateDate();
 
 	});

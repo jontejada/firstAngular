@@ -8,7 +8,7 @@
 </head>
 <body ng-controller="ShoppingController">
 	<div id="header">
-		<h1>welcome to the shop</h1>
+		<h1>shop</h1>
 		<!-- <h3>buy stuff here</h3> -->
 	</div>
 	<div>
@@ -16,7 +16,7 @@
 		<ul>
 			<li ng-repeat="item in forSale">
 				<button ng-click="addItem(item)">add to cart</button>
-				<b>{{item.name}}</b> {{item.price / 100 | currency }}
+				<b>{{item.name}}</b>{{item.price / 100 | currency }}
 			</li>
 		</ul>
 	</div>
@@ -32,10 +32,10 @@
 	</div>
 	<div>
 		<h3>shipping</h3>
-		<label>choose a shipping option:
-			<select ng-options="method.name for method in shippingMethods track by method.id" ng-model="selectedMethod"></select>
+		<label><!-- choose a shipping option: -->
+			<select ng-options="method.name for method in shippingMethods track by method.id" ng-model="selectedMethod" ng-change="updateDate()"></select>
 		</label>
-		{{selectedMethod.price / 100 | currency}}
+		{{selectedMethod.price / 100 | currency}}, arrives on<b>{{deliveryDate.toDateString()}}</b>
 		<h4>total after tax, with shipping: {{(totalCost+selectedMethod.price) /100 | currency}}</h4>
 	</div>
 </body>
