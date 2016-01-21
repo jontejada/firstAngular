@@ -14,12 +14,13 @@
 
 ####filter
 - format value of an **expression** for display to user
+- [built-in filters](https://docs.angularjs.org/api/ng/filter), can also define custom ones
 
 ####view
 - what the user sees
 - the DOM
 
-####[data binding](https://docs.angularjs.org/guide/databindingtw)
+####[data binding](https://docs.angularjs.org/guide/databinding)
 - 2-way data sync between **model** and **view**
 - changes to JS module automatically update the DOM. explicit refresh is not required 
 
@@ -58,6 +59,8 @@
 - JS-like code snippets
 - mainly in interpolation bindings `{{ }}`
 - also in direct attr, e.g. `ng-click="somefn()`
+- *DO NOT* write conditionals or loops inside an expression
+- can use filters
 
 ####model
 - data shown to user in the **view**
@@ -106,8 +109,33 @@ application.controller("HelloController", function($scope) {
 
 [thinking in Angular](http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background/15012542#15012542) on stackoverflow
 
-###[ngModel](https://docs.angularjs.org/api/ng/directive/ngModel)
+###[`ngModel`](https://docs.angularjs.org/api/ng/directive/ngModel)
 - binds input, select, textarea or custom form control to a property on the scope
 
 about dirty checling:
 >Angular defines a concept of a so called digest cycle. This cycle can be considered as a loop, during which Angular checks if there are any changes to all the variables watched by all the $scopes. So if you have $scope.myVar defined in your controller and this variable was marked for being watched, then you are explicitly telling Angular to monitor the changes on myVar in each iteration of the loop.
+
+[about `$apply()` and `$digest()`](http://www.sitepoint.com/understanding-angulars-apply-digest/)
+
+[digest loop and apply](https://www.ng-book.com/p/The-Digest-Loop-and-apply/)
+
+[ng-newsletter how to get started](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
+
+[ng-newsletter how to learn](http://www.ng-newsletter.com/posts/how-to-learn-angular.html)
+
+
+#future stuff
+
+THURSDAY 2016-01-21 stuff 
+
+[Tyler's MVC slides](http://slides.com/tylerbettilyon/angularmvc)
+
+[MVC MVVM](http://codechutney.in/blog/javascript/mvc-and-mvvm-with-angularjs/)
+
+![mvv](http://codechutney.in/blog/wp-content/uploads/2014/12/MVVM-e1419180164773.jpg)
+
+scope (07)
+
+FRIDAY 2016-01-22 stuff (going to miss)
+
+built-in directives (05)
