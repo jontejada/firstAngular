@@ -123,18 +123,23 @@ about dirty checling:
 
 [ng-newsletter how to learn](http://www.ng-newsletter.com/posts/how-to-learn-angular.html)
 
-
-#future stuff
-
 THURSDAY 2016-01-21 stuff 
 
 [Tyler's MVC slides](http://slides.com/tylerbettilyon/angularmvc)
+- controller code happens *once*
+- add watcher if you want stuff updated or evaluate in `{{}}`
+- *do not* have multiple ng-app directives
+- $scope variable is the "view model"
+- do internal logic, helper functions, api calls, etc. in conroller, then pass into scope
 
 [MVC MVVM](http://codechutney.in/blog/javascript/mvc-and-mvvm-with-angularjs/)
 
 ![mvv](http://codechutney.in/blog/wp-content/uploads/2014/12/MVVM-e1419180164773.jpg)
 
 scope (07)
+
+#future stuff
+
 
 FRIDAY 2016-01-22 stuff (going to miss)
 

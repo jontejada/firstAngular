@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<link rel="stylesheet" type="text/css" href="myStore.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+	<script type="text/javascript" src="myStore.js"></script>
+	<title></title>
+</head>
+<body ng-controller="ShoppingController">
+	<div id="header">
+		<h1>welcome to the shop</h1>
+		<!-- <h3>buy stuff here</h3> -->
+	</div>
+	<div>
+		<h3>for sale</h3>
+		<ul>
+			<li ng-repeat="item in forSale">
+				<button ng-click="addItem(item)">add to cart</button>
+				<b>{{item.name}}</b> {{item.price / 100 | currency }}
+			</li>
+		</ul>
+	</div>
+	<div>
+		<h3>your cart ({{cartItems.length}} items)</h3>
+		<ul>
+			<li ng-repeat="item in cartItems track by $index">
+			<button ng-click="removeItem(item)"><b>X</b></button>	
+			<b>{{item.name}}</b> {{item.price / 100 | currency}}
+			</li>
+		</ul>
+		<h4>total after tax: {{totalCost / 100 | currency}}</h4>
+	</div>
+	<div>
+		<h3>shipping</h3>
+		<label>choose a shipping option:
+			<select ng-options="method.name for method in shippingMethods track by method.id" ng-model="selectedMethod"></select>
+		</label>
+		{{selectedMethod.price / 100 | currency}}
+		<h4>total after tax, with shipping: {{(totalCost+selectedMethod.price) /100 | currency}}</h4>
+	</div>
+</body>
+</html>
