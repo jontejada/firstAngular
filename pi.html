@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="myStore.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+    <script type="text/javascript" src="pi.js"></script>
+
+</head>
+<body>
+<!-- 	<div ng-controller="PiController">
+		<h2>{{3.14159265359}}</h2>
+		<h2>{{3.14159265359 | currency}}</h2>
+		<input type="text" ng-model="typed">
+		<h2>{{typed | uppercase}}</h2>
+		<h2>{{typed | limitTo:4}}</h2>
+		<h2>{{typed | json}}</h2>
+		{{3.14159265359 | number:3}}<br>
+		{{3.14159265359 | number:6}}<br>
+		{{3.14159265359 | number:1}}<br>
+		<h3>how many digits?<select ng-options="item.actual for item in lengths" ng-model="selectedLength"></select></h3>
+		<h2>here are the first {{selectedLength.actual}} digits of pi:
+		{{3.14159265359 | number:selectedLength.actual}}</h2>
+		
+		<h2><ng-pluralize count="selectedLength.actual" when="{1:'here is the first digit of pi','other':'here are the first {} digits of pi:'}"></ng-pluralize>
+		{{3.14159265359 | number:selectedLength.actual}}</h2>
+	</div> -->
+	<div ng-controller="TipController">
+		<h1><label>
+			How much did your meal cost?
+			<input type="text" ng-model="cost">
+		</label></h1>
+		<h1>How much do you want to tip?</h1>
+		<select ng-options="item.str for item in tipOptions" ng-model="selectedTip"></select>
+		<h1>Subtotal: {{cost | currency}}</h1>
+		<h1>Tip: {{cost * selectedTip.perc | currency}}</h1>
+		<h1>Total: {{cost * (1+selectedTip.perc) | currency}}</h1>
+	</div>
+</body>
+</html>

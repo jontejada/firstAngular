@@ -138,6 +138,21 @@ THURSDAY 2016-01-21 stuff
 
 scope (07)
 
+[Tyler's controllers and scope slides](http://slides.com/tylerbettilyon/controllers-scope#/)
+- first "rule" -- one controller at a time. mix and match as little as possible.
+	- single controller for a single state
+	- sharing data between controllers is messy (emit, etc)
+	- biggish/beefier controller is better than a few smaller for different states
+	- controller is main unit of angular 
+- two -- use $scope judiciously
+	- may slow things down
+	- process stuff out of scope, then on click process into a few strings that are passed to the scope
+	- anytime you ng-bind etc it adds watchers and too many watchers === slow code
+
+- be as precise as possible with ng-controller, $scope and $rootScope
+	- $rootScope is the global object like window. useful for some things, but use judiciously
+
+
 #future stuff
 
 

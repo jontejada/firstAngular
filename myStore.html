@@ -8,7 +8,8 @@
 </head>
 <body ng-controller="ShoppingController">
 	<div id="header">
-		<h1>shop</h1>
+		<h1>SHOP</h1>
+		<h4>today: {{date | date:'EEE yyyy-mm-dd'}}</h4>
 		<!-- <h3>buy stuff here</h3> -->
 	</div>
 	<div>
@@ -36,6 +37,9 @@
 			<select ng-options="method.name for method in shippingMethods track by method.id" ng-model="selectedMethod" ng-change="updateDate()"></select>
 		</label>
 		{{selectedMethod.price / 100 | currency}}, arrives on<b>{{deliveryDate.toDateString()}}</b>
+		<br>
+		<!-- *s below does not work -->
+		<h1><span ng-repeat="days in selectedMethod">*</span></h1>
 		<h4>total after tax, with shipping: {{(totalCost+selectedMethod.price) /100 | currency}}</h4>
 	</div>
 </body>

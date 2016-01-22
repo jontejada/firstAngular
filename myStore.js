@@ -41,10 +41,11 @@ angular.module("app", [])
 		// 	$scope.deliveryDate = date;
 		// }
 		// $scope.updateDate = updateDate;
+		$scope.date = new Date();
 		$scope.updateDate = function() {
-			var date = new Date();
-			date.setDate(date.getDate() + $scope.selectedMethod.days);
-			$scope.deliveryDate = date;
+			$scope.deliveryDate = new Date();
+			// $scope.date.;
+			$scope.deliveryDate.setDate($scope.date.getDate() + $scope.selectedMethod.days);
 		};
 		$scope.updateDate();
 
