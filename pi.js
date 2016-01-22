@@ -31,3 +31,13 @@ app.controller("TipController", function($scope) {
 	];
 	$scope.selectedTip = $scope.tipOptions[0];
 });
+
+app.controller("MadController", function($scope) {
+	$scope.a = '';
+	$scope.b = '';
+	$scope.c = '';
+	$scope.d = '';
+	$scope.e = '';
+	$scope.f = '';
+	$scope.g = '';
+});

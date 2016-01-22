@@ -5,9 +5,27 @@
 	<link rel="stylesheet" type="text/css" href="myStore.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
     <script type="text/javascript" src="pi.js"></script>
-
+	<style type="text/css">
+		span {
+			color:blue;
+		}
+		input {
+			color:blue;
+		}
+	</style>
 </head>
 <body>
+	<div ng-controller="MadController">
+		<h4><label><input type="text" ng-model="a"> boy's name</label></h4>
+		<h4><label><input type="text" ng-model="b"> adjective</label></h4>
+		<h4><label><input type="text" ng-model="c"> plural noun</label></h4>
+		<h4><label><input type="text" ng-model="d"> plural noun</label></h4>
+		<h4><label><input type="text" ng-model="e"> an insect, plural</label></h4>
+		<h4><label><input type="text" ng-model="f"> plural noun</label></h4>
+		<h4><label><input type="text" ng-model="g"> verb ending in 's'</label></h4>
+		<h2>I'm in love with <span>{{a}}</span>. He's so <span>{{b}}</span>! He has big flat <span>{{c}}</span>, and when our <span>{{d}}</span> meet, I get <span>{{e}}</span> in my stomach. I've fallen for him like a ton of <span>{{f}}</span>, and he <span>{{g}}</span> for me, too. But I think he's got another girlfriend. What should I do?</h2>
+
+	</div>
 <!-- 	<div ng-controller="PiController">
 		<h2>{{3.14159265359}}</h2>
 		<h2>{{3.14159265359 | currency}}</h2>
@@ -29,11 +47,12 @@
 		<h1><label>
 			How much did your meal cost?
 			<input type="text" ng-model="cost">
+			<button ng-click="cost=0">reset</button>
 		</label></h1>
 		<h1>How much do you want to tip?</h1>
 		<select ng-options="item.str for item in tipOptions" ng-model="selectedTip"></select>
 		<h1>Subtotal: {{cost | currency}}</h1>
-		<h1>Tip: {{cost * selectedTip.perc | currency}}</h1>
+		<h1>{{selectedTip.str}} Tip: {{cost * selectedTip.perc | currency}}</h1>
 		<h1>Total: {{cost * (1+selectedTip.perc) | currency}}</h1>
 	</div>
 </body>
