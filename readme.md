@@ -156,6 +156,9 @@ scope (07)
 #future stuff
 
 
-FRIDAY 2016-01-22 stuff (going to miss)
+FRIDAY 2016-01-22
+
+[notes here]
+
 
 built-in directives (05)
