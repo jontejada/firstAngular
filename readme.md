@@ -7,7 +7,7 @@
 
 ##[thinkster's better way](https://thinkster.io/a-better-way-to-learn-angularjs) mostly links. notes in notebook.
 
-###[conceptucal overview](https://docs.angularjs.org/guide/concepts)
+###[conceptual overview](https://docs.angularjs.org/guide/concepts)
 
 ####scope
 - context where **model** is stored so **controllers**, **directives** and **expressions** can access it

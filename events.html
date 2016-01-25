@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="eventsApp">
+<head>
+	<title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js" type="text/javascript"></script>
+    <script src="events.js" type="text/javascript"></script>
+    <style type="text/css">
+    	body {
+    		font-family: sans-serif;
+    	}
+		.score {
+			background-color: #90C3D4;
+			margin:20px;
+			padding:5px;
+			color:white;
+			height:100px;
+			width:200px;
+			text-align: center;
+		}
+		.divbox {
+		  width: 400px;
+		  height: 100px;
+		  border-style: solid;
+		  border-width: 6px;
+		}
+
+    </style>
+</head>
+<body ng-controller="EventsCon">
+	{{test}}
+	<button ng-click="pickRandomNumber()">Pick Random Number</button>
+	<input type="text" ng-model="rev">
+	<button ng-click="reverse()">reverse it!</button>
+	{{rev}}
+	<div class="score" ng-click="p1score()">player 1<h1>{{p1.score}}</h1></div>
+	<div class="score" ng-click="p2score()">player 2<h1>{{p2.score}}</h1></div>
+	<button ng-click="reset()">new game</button>
+	<div class="divbox" ng-mouseenter="enterCount = enterCount + 1">
+		<h3>The div was entered {{enterCount}} times</h3>
+
+	</div>
+	<br>
+	<div class="divbox" ></div>
+
+</body>
+</html>
