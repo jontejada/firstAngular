@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="form">
+<head>
+	<title></title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+	<script src="form.js"></script>
+</head>
+<body ng-controller="FormController">
+<form ng-submit="submitFav()" name="favPieForm">
+  <input name="name" type="text" ng-model="favoriteForm.name">
+  <input name="favorite_pie" type="text" ng-model="favoriteForm.favoritePie">
+  <input type="submit">
+</form>
+Name: {{favoriteForm.name}}<br>
+Favorite Pi: {{favoriteForm.favoritePie}}
+
+</body>
+</html>
