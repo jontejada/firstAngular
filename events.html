@@ -18,10 +18,28 @@
 			text-align: center;
 		}
 		.divbox {
-		  width: 400px;
-		  height: 100px;
+		  width: 200px;
+		  height: 200px;
 		  border-style: solid;
-		  border-width: 6px;
+		  border-width: 10px;
+		  text-align: center;
+		  border-radius: 200px;
+		}
+		h1 {
+			padding-top: 60px;
+		}
+		#parentBox {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.all {
+			width: 200px;
+		  height: 200px;
+		  border-style: solid;
+		  border-width: 10px;
+		  text-align: center;
+		  border-radius: 200px;
+			margin: -35px;
 		}
 
     </style>
@@ -32,15 +50,22 @@
 	<input type="text" ng-model="rev">
 	<button ng-click="reverse()">reverse it!</button>
 	{{rev}}
-	<div class="score" ng-click="p1score()">player 1<h1>{{p1.score}}</h1></div>
-	<div class="score" ng-click="p2score()">player 2<h1>{{p2.score}}</h1></div>
+	<div class="score" ng-click="p1score()">player 1<h2>{{p1.score}}</h2></div>
+	<div class="score" ng-click="p2score()">player 2<h2>{{p2.score}}</h2></div>
 	<button ng-click="reset()">new game</button>
 	<div class="divbox" ng-mouseenter="enterCount = enterCount + 1">
-		<h3>The div was entered {{enterCount}} times</h3>
-
+		<h3>entered {{enterCount}} times</h3>
 	</div>
 	<br>
-	<div class="divbox" ></div>
+	<div class="divbox" ng-mousemove="newColor()" ng-style="{'background-color':aColor}"><h1>{{aColor}}</h1></div>
+		<button ng-click="replay()">replay!</button>
 
+	<h1>{{colorHistory.length}} colors!</h1>
+
+	<div id="parentBox">
+		<div ng-repeat="oneColor in colorHistory" class="divbox all" ng-style="{'background-color':oneColor}">
+			<h1>{{oneColor}}</h1>
+		</div>
+	</div>
 </body>
 </html>
