@@ -31,7 +31,7 @@
 - **controller** constructor fucntion in JS file
 
 ####dependency injection
-- ceeates and writes objects and functions
+- creates and writes objects and functions
 
 ####injector
 - **dependency injection** container
