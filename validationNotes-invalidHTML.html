@@ -1,0 +1,23 @@
+<input ng-model="newPost.description" type="text" class="ng-pristine ng-untouched ng-valid ng-empty"> initial and after click in
+<input ng-model="newPost.description" type="text" class="ng-pristine ng-valid ng-empty ng-touched"> after click in and out
+<input ng-model="newPost.description" type="text" class="ng-valid ng-touched ng-not-empty ng-dirty ng-valid-parse"> after click and type
+
+						 PRISTINE?   VALID?   TOUCHED?      EMPTY?        VALID-PARSE(?)       
+initial (and click in):  ng-pristine ng-valid ng-untouched  ng-empty
+click in and out:        ng-pristine ng-valid ng-touched    ng-empty
+after click in and type: ng-dirty    ng-valid ng-touched    ng-not-empty  ng-valid-parse
+
+
+reddit input element title field:
+form-control ng-pristine ng-untouched ng-invalid ng-invalid-required -- initial
+form-control ng-pristine ng-invalid ng-invalid-required ng-touched -- touched
+form-control ng-touched ng-dirty ng-valid-parse ng-valid ng-valid-required -- typed letter
+form-control ng-touched ng-dirty ng-valid-parse ng-invalid ng-invalid-required -- deleted letter --> error shown
+
+
+validation.html form element classes:
+ng-pristine ng-invalid ng-invalid-required ng-valid-minlength   ng-valid-maxlength ng-valid-email                 --> initial
+ng-dirty    ng-valid   ng-valid-required   ng-valid-minlength   ng-valid-maxlength ng-valid-email ng-valid-parse --> typed letter into name
+ng-dirty    ng-invalid ng-invalid-required ng-valid-minlength   ng-valid-maxlength ng-valid-email ng-valid-parse --> deleted letter (required field)
+ng-dirty    ng-invalid ng-valid-required   ng-invalid-minlength ng-valid-maxlength ng-valid-email ng-valid-parse -->typed username letter (too short)
+
