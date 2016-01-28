@@ -153,12 +153,51 @@ scope (07)
 	- $rootScope is the global object like window. useful for some things, but use judiciously
 
 
-#future stuff
-
-
-FRIDAY 2016-01-22
-
+####FRIDAY 2016-01-22
 [notes here]
-
-
 built-in directives (05)
+
+
+####THURS2016-01-28
+
+#routing
+
+Elie's lecture on [this](https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/05-routing.md)
+
+[History_API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
+push state 
+client side routing
+
+
+- add CDN script link 
+- add `ngRoute` module level dependency 
+
+index.html
+js/app.js for routing 
+js/controller.js for controllers
+patials/
+
+partials === templates in this case
+
+
+#custom filters
+
+`<h1 ng-repeat='number in numbers'>{{number | bananaFilter}}`
+
+```javascript
+app.filter('bananaFilter',function(){
+	return function(input){
+		//console.log(input);
+		//return input;
+		return Math.abs(input)
+		
+	}
+})
+```
+[replace String method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+
+custom filter is attached to app --> available everywhere
+
+
+can provide arguments to a filter with a `:`, pass into returned function
+

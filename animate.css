@@ -2,9 +2,9 @@ body {
 	font-family: sans-serif;
 }
 
-div {
-	width:200px;
-	height: 200px;
+.dot {
+	width:60px;
+	height: 60px;
 	background-color: #FF6766;
 	margin:2px;
 	border-radius: 100px;
@@ -12,11 +12,36 @@ div {
 	/*transition-timing-function: steps(10, end);*/
 }
 
-div:hover {
+.dot:hover {
 	background-color: #97CE68;
 	border-radius: 10px;
 	transform: rotate(90deg);
-	width: 400px;
-	height:400px;
+	width: 20px;
+	height:40px;
 	color:white;
+}
+
+.but {
+	width:200px;
+	height:60px;
+	background-color: red;
+	margin:2px;
+}
+
+
+.ng-enter{
+    transition: 0.5s ease all;
+    opacity: 0;
+}
+.ng-enter.ng-enter-active{
+    opacity: 1;
+}
+
+.ng-leave{
+    transition: 0.5s ease all;
+    opacity: 1;
+}
+
+.ng-leave.ng-leave-active{
+    opacity: 0;
 }

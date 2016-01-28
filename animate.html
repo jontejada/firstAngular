@@ -9,8 +9,8 @@
 </head>
 <body ng-controller="BodyController">
 	<h1>{{test}}</h1>
-	<div>1</div>
-	<div>2</div>
-	<div>3</div>
+	<div class="dot" ng-repeat="n in arr track by $index">{{n}}</div>
+	<div class="but" ng-click="arr.push(5)">add()</div>
+	<div class="but" ng-click="del()">del()</div>
 </body>
 </html>
