@@ -50,6 +50,9 @@ app.controller('SecondController', function($scope){
 	$scope.message = "Hello from SecondController";
 });
 
-app.controller('NumController', function($scope){
+app.controller('NumController', function($scope, $routeParams){
 	$scope.number = 24;
+	console.log($routeParams);
+	$scope.para1 = $routeParams[1];
+	$scope.para2 = $routeParams[2];
 });

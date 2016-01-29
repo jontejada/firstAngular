@@ -1,17 +1,21 @@
 <h2>this is first.html content</h2>
 $scope.message = <span class="expression">{{message}}</span>
 <br>
-<a href="/">"/"</a> (why does this clear the ng-view div?)
+<a ng-href="#/second">ng-href="#/second"</a>
 <br>
-<a href="#/">"#/"</a>
+<a href="#">href="#"</a> (why does this clear the ng-view div?)
 <br>
-<a href="#/first">"#/first"</a> HERE
+<a href="#/">href="#/"</a>
 <br>
-<a href="#/second">"#/second"</a>
+<!-- <a ng-click="" href="">""</a>
 <br>
-<a href="#/num/4">"#/num/4"</a>
+ --><a href="#/first">href="#/first"</a> HERE
 <br>
-<a href="#/http">"#/http"</a>
+<a href="#/second">href="#/second"</a>
 <br>
-<input type="text" ng-model="inNum">
-<button ng-click="">go to num/{{inNum}}</button>
+<a href="#/num/4/5">href="#/num/4/5"</a>
+<br>
+<a href="#/http">href="#/http"</a>
+<br>
+<input type="text" ng-model="inNum"> 
+<button ng-click="">go to num/{{inNum}}</button> (not working yet)
