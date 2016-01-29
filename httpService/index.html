@@ -20,5 +20,22 @@
 	<h2>error message copied from chrome console:</h2>
 	<p>XMLHttpRequest cannot load https://itunes.apple.com/search?term=jack+johnson. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://127.0.0.1:8080' is therefore not allowed access.
 XHR failed loading: GET "https://itunes.apple.com/search?term=jack+johnson".</p>
+	<h2>heroku chat app</h2>
+	<p>{{chat}}<p>
+	<form name="chatForm" ng-submit="sendChat()">
+		<label>
+			name
+			<input type="text" name="name" ng-model="message.name">
+		</label>
+		<label>
+			message
+			<input type="text" name="content" ng-model="message.content">
+		</label>
+		<button type="submit" value="submit">submit</button>
+	</form>
+	<h2>post success</h2>
+	<p>{{postReturnData}}</p>
+	<h2>post fail</h2>
+	<p>{{postReturnErr}}</p>
 </body>
 </html>
