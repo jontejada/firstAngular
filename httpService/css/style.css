@@ -4,4 +4,24 @@ body {
 	margin-left: 20px;
 	/*background-color: #84A9C0;*/
 	/*color:white;*/
+	text-align: center;
+	line-height: 160%;
+	font-size: 110%
+}
+
+div {
+	background-color: white;
+	padding:20px;
+	border-radius: 20px;
+	width:80%;
+	margin: auto;
+}
+
+.expression {
+	color:#53DD6C;
+	font-weight: 400;
+}
+
+a {
+	font-weight: 900;
 }

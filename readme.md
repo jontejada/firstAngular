@@ -201,3 +201,32 @@ custom filter is attached to app --> available everywhere
 
 can provide arguments to a filter with a `:`, pass into returned function
 
+#services
+[gh curr](https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/08-services.md)
+
+[tyl slides](http://slides.com/tylerbettilyon/built-in-services/)
+
+- built-in and custom
+- $HTTP --> dep inje --> other built in
+- reusble bundles of code
+
+##`$HTTP`
+- include `$HTTP` as a parameter in the controlller
+- $HTTP is a series of functions you can use for AJAX requests
+	- shared AJAX functionality keeps things separate
+
+###side-notes about module with one or two parmeters - one parameter is a fetch / getter
+- two parameters is a constructor / setter
+
+question: can you hide api keys in angular $HTTP requests
+
+## `$location`
+- angular wrapper for window.location (never use the window!)
+- all are getters and setters!
+- changing $location.url after #
+	- leave the octothorpe! tells you separation  
+
+##`$exceptionHandler`
+
+
+always check (https://docs.angularjs.org/api/ng/service)

@@ -5,37 +5,13 @@
 	<title>http stuff</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/controllers.js"></script>
 </head>
-<body ng-controller="SomeController">
-	<h2>zenData</h2>
-	<p>{{zenData}}<p>
-	<h2>zenData.data</h2>
-	<p>{{zenData.data}}<p>
-	<h2>itunes (empty because this fails)</h2>
-	<p>{{itunes}}<p>
-	<h2>itunes error</h2>
-	<p>{{itunesErr}}<p>
-	<h2>error message copied from chrome console:</h2>
-	<p>XMLHttpRequest cannot load https://itunes.apple.com/search?term=jack+johnson. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://127.0.0.1:8080' is therefore not allowed access.
-XHR failed loading: GET "https://itunes.apple.com/search?term=jack+johnson".</p>
-	<h2>heroku chat app</h2>
-	<p>{{chat}}<p>
-	<form name="chatForm" ng-submit="sendChat()">
-		<label>
-			name
-			<input type="text" name="name" ng-model="message.name">
-		</label>
-		<label>
-			message
-			<input type="text" name="content" ng-model="message.content">
-		</label>
-		<button type="submit" value="submit">submit</button>
-	</form>
-	<h2>post success</h2>
-	<p>{{postReturnData}}</p>
-	<h2>post fail</h2>
-	<p>{{postReturnErr}}</p>
+<body>
+	<h1>this is index.html content</h1>
+	<header>and the following div is ng-view content:</header>
+	<div ng-view></div>
 </body>
 </html>

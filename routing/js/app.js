@@ -18,5 +18,5 @@ app.config(function($routeProvider,$locationProvider){ //$routeProvider is the i
 		.otherwise({
 			redirectTo: '/'
 		});
-		$locationProvider.html5Mode(true); //getting rid of #
+		// $locationProvider.html5Mode(true); //getting rid of #
 });

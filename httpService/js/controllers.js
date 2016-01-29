@@ -1,4 +1,4 @@
-app.controller('SomeController', function($scope,$http) {
+app.controller('HttpController', function($scope,$http) {
 	$http.get('https://api.github.com/zen').then(function(data){
 		$scope.zenData = data;
 	});
@@ -37,3 +37,19 @@ app.controller('SomeController', function($scope,$http) {
 //from https://docs.angularjs.org/api/ng/service/$http
 // $http.get('/someUrl', config).then(successCallback, errorCallback);
 // $http.post('/someUrl', data, config).then(successCallback, errorCallback);
+
+
+//pulled from routing work
+
+app.controller('FirstController', function($scope){
+	$scope.message = "Hello from FirstController";
+	$scope.inNum = 0;
+});
+
+app.controller('SecondController', function($scope){
+	$scope.message = "Hello from SecondController";
+});
+
+app.controller('NumController', function($scope){
+	$scope.number = 24;
+});

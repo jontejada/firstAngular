@@ -1,0 +1,30 @@
+<h2>this is dollar-sign-http.html content</h2>
+<a href="#/">"#/"</a>
+<h3>zenData</h3>
+<p class="expression">{{zenData}}<p>
+<h3>zenData.data</h3>
+<p class="expression">{{zenData.data}}<p>
+<h3>itunes (empty because this fails)</h3>
+<p class="expression">{{itunes}}<p>
+<h3>itunes error</h3>
+<p class="expression">{{itunesErr}}<p>
+<h3>error message copied from chrome console:</h3>
+<p><i>XMLHttpRequest cannot load https://itunes.apple.com/search?term=jack+johnson. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://127.0.0.1:8080' is therefore not allowed access.
+XHR failed loading: GET "https://itunes.apple.com/search?term=jack+johnson".</i></p>
+<h3>heroku chat app</h3>
+<p class="expression">{{chat}}<p>
+<form name="chatForm" ng-submit="sendChat()">
+	<label>
+		name
+		<input type="text" name="name" ng-model="message.name">
+	</label>
+	<label>
+		message
+		<input type="text" name="content" ng-model="message.content">
+	</label>
+	<button type="submit" value="submit">submit</button>
+</form>
+<h3>post success</h3>
+<p class="expression">{{postReturnData}}</p>
+<h3>post fail</h3>
+<p class="expression">{{postReturnErr}}</p>
