@@ -34,6 +34,6 @@ app.controller('SomeController', function($scope,$http) {
 });
 
 
-
+//from https://docs.angularjs.org/api/ng/service/$http
 // $http.get('/someUrl', config).then(successCallback, errorCallback);
 // $http.post('/someUrl', data, config).then(successCallback, errorCallback);
