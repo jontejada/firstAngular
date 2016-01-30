@@ -1,11 +1,7 @@
 var app = angular.module('httpApp', ['ngRoute']);
 
-app.config(function($routeProvider, $locationProvider){
+app.config(function($routeProvider){ // took out unused `, $locationProvider` param
 	$routeProvider
-		// .when('/', {
-		// 	templateUrl: "templates/first.html",
-		// 	controller: "FirstController"
-		// })
 		.when('/', {
 			templateUrl: "templates/first.html",
 			controller: "FirstController"
@@ -23,6 +19,10 @@ app.config(function($routeProvider, $locationProvider){
 			templateUrl: "templates/num.html",
 			controller: "NumController"
 		})
+		.when('/filtering', {
+			templateUrl: "templates/filtering.html",
+			controller: "FilterController"
+		})
 		.otherwise({
 			redirectTo: "/"
 			// templateUrl: "templates/first.html",
@@ -30,3 +30,4 @@ app.config(function($routeProvider, $locationProvider){
 
 		});
 });
+

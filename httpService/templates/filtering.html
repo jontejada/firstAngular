@@ -1,0 +1,35 @@
+<h2>this is filtering.html</h2>
+<a href="#/">href="#/"</a>
+<br>
+<!-- <ol>
+	<li ng-repeat="unit in units">{{unit}}</li>
+</ol>
+<br>
+ -->
+
+{{"hello_class"}}
+{{"hello_class" | apple}}
+<br>
+{{"hello_class" | kebab}}
+<br>
+{{"hello_class" | uppercase}}
+
+<h3>original</h3>
+<ul>
+	<li ng-repeat="ex in examples">{{ex}}</li>
+</ul>
+
+<h3>ordinal filter</h3>
+<ul>
+	<li ng-repeat="ex in examples">{{ex | ordinal}}</li>
+</ul>
+
+<h3>num filter</h3>
+<ul>
+	<li ng-repeat="ex in examples">{{ex | num}}</li>
+</ul>
+
+<h3>kebab filter with !isNaN exclusion</h3>
+<ul>
+	<li ng-repeat="ex in examples">{{ex | kebab}}</li>
+</ul>
