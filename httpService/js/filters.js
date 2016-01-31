@@ -15,7 +15,6 @@ app.filter('kebab', function(){
 	};
 });
 
-
 app.filter('ordinal', function(){
   return function(number){
     if(isNaN(number) || number < 1){
@@ -39,5 +38,11 @@ app.filter('ordinal', function(){
 app.filter('num', function(){
 	return function(input){
 		return false;
+	};
+});
+
+app.filter('num2', function(){
+	return function(input){
+		return ;
 	};
 });
