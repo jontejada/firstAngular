@@ -35,14 +35,15 @@ app.filter('ordinal', function(){
 });
 
 
-app.filter('num', function(){
-	return function(input){
-		return false;
-	};
-});
+// app.filter('num', function(){
+// 	return function(input){
+// 		return false;
+// 	};
+// });
 
-app.filter('num2', function(){
-	return function(input){
-		return ;
+app.filter('redact', function(){
+	return function(input,redactedStr){
+		// debugger
+		return input.replace(redactedStr,"REDACTED");
 	};
 });

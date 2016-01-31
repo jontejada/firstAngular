@@ -7,6 +7,15 @@
 <br>
  -->
 
+{{"My dog Rusty is adorable" | redact: "Rusty"}}
+
+<br>
+<input type="text" ng-model="redInput">
+<br>
+{{"My dog Rusty is adorable" | redact: redInput}}
+
+<br>
+
 {{"hello_class"}}
 {{"hello_class" | apple}}
 <br>
@@ -26,7 +35,7 @@
 
 <h3>num filter</h3>
 <ul>
-	<li ng-repeat="ex in examples">{{ex | num}}</li>
+	<!-- <li ng-repeat="ex in examples">{{ex | num}}</li> -->
 </ul>
 
 <h3>kebab filter with !isNaN exclusion</h3>

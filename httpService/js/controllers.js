@@ -60,4 +60,5 @@ app.controller('NumController', function($scope, $routeParams){
 app.controller('FilterController', function($scope){
 	// $scope.units = ['a','b','c','d','e'];
 	$scope.examples = [1,2,3,4,555,1901,'two',0,24];
+	$scope.redInput = "";
 });
