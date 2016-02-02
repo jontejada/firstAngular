@@ -230,3 +230,41 @@ question: can you hide api keys in angular $HTTP requests
 
 
 always check (https://docs.angularjs.org/api/ng/service)
+
+
+##Tyler's "Creating Angular Services" lecture 2016-02-01
+[slides](http://slides.com/tylerbettilyon/creating-angular-services#/)
+
+- share code
+- dependency inject stuff (like require)
+- pre-baked code
+- narrowly defined, specific single responsibility code that can be reused
+- service is always a "singleton"
+	- you're not injecting a copy
+	- pointers all pointed to `$http`
+
+###difference between a service and a factory
+- both are singletons, share data across app
+- service invokes the second parameter function with a `new` keyword
+
+```javascript
+mainApp.service('CalcService', function() { //runs with new
+	this.square = function(a) { //new return this (?)
+		return a * a;
+	}
+});
+```
+
+##Tyler's "Custom Directive" lecture on 2016-02-02
+[slides](http://slides.com/tylerbettilyon/directives/)
+
+- mechansism to create custom HTML element
+- similar to partials but with the additional power of their own controller
+- Can also be used like ng-bind to add specific functionality to any existing html element
+
+###creating a directive
+
+camelCase directive name --> kebabCase for element naming / can also use a normal 
+
+
+(Angular's jqLite)[https://docs.angularjs.org/api/ng/function/angular.element]

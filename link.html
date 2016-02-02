@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="linkApp">
+<head>
+	<title>custom directive using link</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+	<script src="link.js"></script>
+	<style>
+		body {
+			color:white;
+			font-family: sans-serif;
+			text-align: center;
+			background-color: #39A0ED;
+		}
+		.bluedivs {
+			width:220px;
+			height:80px;
+			border-radius: 40px;
+			background-color: #0C6291;
+			margin:2px;
+			display: inline-block;
+		}
+		.visited {
+			color:black;
+		}
+		.circle {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			border-radius: 50%;
+			line-height: 100px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="bluedivs" jt-change-bk><h1>Hello</h1></div>
+	<div class="bluedivs" jt-change-bk><h1>Hello</h1></div>
+	<div class="bluedivs" jt-change-bk><h1>Hello</h1></div>
+	<div class="bluedivs" jt-change-bk><h1>Hello</h1></div>
+	<div class="bluedivs" jt-change-bk><h1>Hello</h1></div>
+	<div class="bluedivs" jt-change-bk><h1>Hello</h1></div>
+	<div class="bluedivs" jt-change-bk><h1>Hello</h1></div>
+	<div class="bluedivs" jt-change-bk><h1>Hello</h1></div>
+	<jt-circle></jt-circle>
+</body>
+</html>
