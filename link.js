@@ -32,11 +32,19 @@ app.directive('jtCircle', function(){
 		link: function(scope, element, attrs) {
 			element.on('click', function(){
 				scope.sayHi();
-				element.css('border','2px solid white'); //this is applied to the <jt-circle> element, not the child circle div
-				element.append('<h4>appended!</h4>');
-				console.log(element.children()[0]);
-				// element.children()[0].css('border','20px solid white'); //TypeError, not a function
+				// element.css('border','2px solid white'); //this is applied to the <jt-circle> element, not the child circle div
+				// element.append('<h4>appended!</h4>');
+				// console.log(element.children()[0]);
+				var randDie = Math.floor(6 * Math.random()) + 9856;
+				console.log(randDie);
+				element.append('<span id="dice">&#' + randDie + ';</span>');
 			});
 		}
 	};
 });
+
+// app.directive('jtDice', function(){
+// 	return {
+
+// 	}
+// });
